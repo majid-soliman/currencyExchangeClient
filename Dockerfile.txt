@@ -1,0 +1,9 @@
+FROM eclipse-temurin:11
+
+LABEL mentainer="javaguides.net@gmail.com"
+
+WORKDIR /app
+
+COPY target/currency-exchangeclient-0.0.1-SNAPSHOT.jar /app/currency-exchangeclient.jar
+
+ENTRYPOINT ["java", "-jar", "currency-exchangeclient.jar"]
